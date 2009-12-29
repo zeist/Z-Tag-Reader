@@ -1,8 +1,8 @@
 #!/usr/bin/ruby
-programdir = $rubydir+"/tagreader"
+programdir = $tagReaderPath 
 load programdir+"/readers/wavpackreader.rb"
 load programdir+"/readers/flacreader.rb"
-load $rubydir+"/config/config.rb"
+load $configPath+"/config.rb"
 class Tagreader 
 	attr_accessor :artist
 	attr_accessor :album

@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-load $rubydir+"/config/config.rb"
+load $configPath+"/config.rb"
 class Wavpackreader 
 	attr_accessor :artist
 	attr_accessor :album
@@ -31,7 +31,6 @@ class Wavpackreader
 
 		for i in 0..test.size-1 do
 			test[i]=test[i].strip
-			#puts test[i][0..5]
 			if test[i][0..4].downcase == "track"
 				@tracknumber = test[i][7..test[i].size].strip
 			end

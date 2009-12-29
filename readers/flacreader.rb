@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-load $rubydir+"/config/config.rb"
+load $configPath+"/config.rb"
 class Flacreader 
 	attr_accessor :artist
 	attr_accessor :album
