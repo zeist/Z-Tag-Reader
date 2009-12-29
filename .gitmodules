@@ -1,0 +1,3 @@
+[submodule "external/config"]
+	path = external/config
+	url = git@github.com:zeist/Z-Ruby-Config.git
