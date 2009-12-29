@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-programdir = $tagReaderPath 
+programdir = File.dirname(__FILE__);
 load programdir+"/readers/wavpackreader.rb"
 load programdir+"/readers/flacreader.rb"
 load $configPath+"/config.rb"

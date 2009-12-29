@@ -1,9 +1,8 @@
 #!/usr/bin/env ruby
 #ENV['RUBYDIR']
-$tagReaderPath = "/home/ashaman/Projects/GitHub/ruby/Z-Tag-Reader"
 $configPath = "/home/ashaman/Projects/GitHub/ruby/Z-Ruby-Config"
 
-load $tagReaderPath+"/tagreader.rb"
+require "../tagreader.rb"
 
 if ARGV.size > 0
 
