@@ -43,7 +43,11 @@ class Flacreader
 		#Genre
 		cmd = initialcmd + "genre \""+i_file+"\""
 		@genre = `#{cmd}`
-		@genre = @genre[6..@genre.size].strip
+        if(@genre.nil? || @genre=="")
+          @genre = "Empty"
+        else
+          @genre = @genre[6..@genre.size].strip
+        end
 		
 		#Album
 		cmd = initialcmd + "album \""+i_file+"\""
