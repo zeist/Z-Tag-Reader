@@ -37,7 +37,11 @@ class Flacreader
 		#Title
 		cmd = initialcmd + "title \""+i_file+"\""
 		@title = `#{cmd}`
-		@title = @title[6..@title.size].strip
+        if(@title.nil? || @titile="")
+          @title = "Empty"
+        else
+          @title = @title[6..@title.size].strip
+        end
 
 		#Date
 		cmd = initialcmd + "date \""+i_file+"\""
