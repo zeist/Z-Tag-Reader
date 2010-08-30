@@ -28,7 +28,11 @@ class Flacreader
 		#Artist
 		cmd = initialcmd + "artist \""+i_file+"\""
 		@artist = `#{cmd}`		
-		@artist = @artist[7..@artist.size].strip
+		if(@artist.nil? || @artist=="")
+          @artist="Empty"
+        else
+          @artist = @artist[7..@artist.size].strip
+        end
 
 		#Title
 		cmd = initialcmd + "title \""+i_file+"\""
@@ -38,7 +42,11 @@ class Flacreader
 		#Date
 		cmd = initialcmd + "date \""+i_file+"\""
 		@date = `#{cmd}`
-		@date = @date[5..@date.size].strip
+        if(@date.nil? || @date=="")
+          @date="0000"
+        else
+          @date = @date[5..@date.size].strip
+        end
 
 		#Genre
 		cmd = initialcmd + "genre \""+i_file+"\""
